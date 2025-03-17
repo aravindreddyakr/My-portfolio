@@ -1,0 +1,188 @@
+/* Global Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 56px; /* For fixed navbar */
+}
+
+/* Section Styling */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-bg.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+/* About Section */
+.about-img img {
+    max-width: 250px;
+    margin: 0 auto 30px;
+    display: block;
+    border: 5px solid var(--light-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Skills Section */
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-item h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+.skill-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.skill-list i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Projects Section */
+.project-card {
+    height: 100%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.tech-stack {
+    margin-top: 15px;
+}
+
+.tech-stack .badge {
+    margin-right: 5px;
+}
+
+/* Contact Section */
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    width: 30px;
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .about-img img {
+        max-width: 200px;
+    }
+}
